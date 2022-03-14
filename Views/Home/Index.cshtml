@@ -1,0 +1,35 @@
+﻿
+@model List<RaviCURDWebApp.DB_Connect_RP.stud_info> 
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>My Student Details Are </h1>
+
+<table calss="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Std_id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>email</th>
+        <th>country</th>
+    </tr>
+    
+        @foreach (var obj in Model)
+        {
+           <tr>
+            <td>@obj.Std_id</td>
+            <td>@obj.Name</td>
+            <td>@obj.Age</td>
+            <td>@obj.email</td>
+            <td>@obj.City</td>
+            <td>@obj.country</td>
+          </tr>
+         }
+   
+
+    </table>
+
+
